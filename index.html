@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квіз: Моя Україна 🇺🇦 (Emoji Edition)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <div class="app-container">
+        <!-- Стартовий екран -->
+        <div id="start-screen" class="screen">
+            <h1 class="start-title">Квіз: Моя Україна 🇺🇦</h1>
+            <p class="start-desc">Перевір свої знання зі стікерами, аудіоефектами та двома рівнями складності!<br>На кожне запитання дається всього <b>6 секунд</b>.</p>
+            <button id="start-btn" class="action-btn">Розпочати квіз ▶</button>
+        </div>
+
+        <!-- Екран квізу -->
+        <div id="quiz-screen" class="screen" style="display: none;">
+            <div class="header-info">
+                <span id="question-tracker">Запитання 1 / 12</span>
+                <span id="streak-tracker">🔥 Комбо: x0</span>
+                <span id="timer">⏱ 6</span>
+                <span id="score-tracker">Очки: 0</span>
+            </div>
+
+            <div class="timer-bar-container">
+                <div id="timer-bar"></div>
+            </div>
+
+            <div class="question-sticker-container" id="question-sticker">🏛️</div>
+
+            <h2 id="question-text">Запитання 1</h2>
+
+            <div id="answers-container"></div>
+        </div>
+
+        <!-- Екран результатів -->
+        <div id="result-screen" class="screen" style="display: none;">
+            <h2 style="font-size: 32px; color: #4ade80; margin-bottom: 6px;">Квіз пройдено! 🎉</h2>
+            <p class="result-details" id="final-answers"></p>
+            <div class="grade-badge" id="final-grade">Оцінка: 12 / 12</div>
+            <p class="result-comment" id="result-comment">Чудовий результат!</p>
+            
+            <div class="review-container">
+                <div class="review-title">📖 Розбір запитань та довідка</div>
+                <div id="review-list"></div>
+            </div>
+
+            <div class="buttons-group">
+                <button id="next-level-btn" class="action-btn next-lvl-btn" style="display: none;">Наступний рівень 🚀</button>
+                <button id="restart-btn" class="action-btn">Пройти знову 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
